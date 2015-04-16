@@ -9,7 +9,17 @@ function countBs(word) {
   return count;
 };
 
+function countChar(word, char) {
+  var count = 0;
+  for (i=0; i < word.length; i++) {
+    if (word[i] === char)
+      count++;
+  };
+  return count;
+};
+
 console.log(countBs("BBC"));
-// → 2
-//console.log(countChar("kakkerlak", "k"));
-// → 4
+console.log("Should be 2")
+
+console.log(countChar("kakkerlak", "k"));
+console.log("Should be 4")
