@@ -1,12 +1,7 @@
 // Your code here.
 
 function countBs(word) {
-  var count = 0
-  for (i=0; i < word.length; i++) {
-    if (word[i] === "B")
-      count ++;
-  };
-  return count;
+  countChar(word, "B")
 };
 
 function countChar(word, char) {
