@@ -1,13 +1,13 @@
 // Your code here.
 function isEven(number) {
   if (number == 0)
-    console.log(true);
+    return (true);
   else if (number == 1)
-    console.log(false);
+    return (false);
   else if (number >=2)
-    isEven(number - 2);
+    return isEven(number - 2);
   else
-    isEven(number + 2);
+    return isEven(number + 2);
 };
 
 
