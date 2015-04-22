@@ -1,9 +1,6 @@
 // Your code here.
 function min(numA, numB) {
-  if (numA < numB)
-    return numA;
-  else
-    return numB;
+  return (numA < numB ? numA : numB);
 };
 
 console.log(min(0, 10));
