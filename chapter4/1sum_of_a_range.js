@@ -7,11 +7,7 @@ function range(lowerLimit, upperLimit) {
 };
 
 function sum(operands) {
-  var sum = 0
-  for (i = 0; i < operands.length; i ++) {
-    sum += operands[i];
-  };
-  return sum;
+  return operands.reduce(function(a, b) { return a + b; } );
 }
 
 
