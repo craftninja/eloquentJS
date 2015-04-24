@@ -12,8 +12,6 @@ function sum(operands) {
 
 
 actual = sum(range(1,10))
-console.log('actual:')
-console.log(actual)
 expected = 1+2+3+4+5+6+7+8+9+10
-console.log('expected:')
-console.log(expected)
+console.log('actual:  ', actual)
+console.log('expected:', expected)

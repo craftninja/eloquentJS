@@ -30,35 +30,25 @@ var nth = function (list, index) {
 
 var actual = arrayToList([1,2,3]);
 var expected = "{ value: 1, rest: { value: 2, rest: { value: 3, rest: null } } }";
-console.log('actual:');
-console.log(actual);
-console.log('expected:');
-console.log(expected);
+console.log('actual:  ', actual);
+console.log('expected:', expected);
 
 actual = listToArray({ value: 1, rest: { value: 2, rest: { value: 3, rest: null } } });
 expected = [1,2,3];
-console.log('actual:');
-console.log(actual);
-console.log('expected:');
-console.log(expected);
+console.log('actual:  ', actual);
+console.log('expected:', expected);
 
 actual = prepend(1, { value: 2, rest: { value: 3, rest: null } });
 expected = "{ value: 1, rest: { value: 2, rest: { value: 3, rest: null } } }";
-console.log('actual:');
-console.log(actual);
-console.log('expected:');
-console.log(expected);
+console.log('actual:  ', actual);
+console.log('expected:', expected);
 
 actual = nth({ value: 1, rest: { value: 2, rest: { value: 3, rest: null } } }, 2);
 expected = 3;
-console.log('actual:');
-console.log(actual);
-console.log('expected:');
-console.log(expected);
+console.log('actual:  ', actual);
+console.log('expected:', expected);
 
 actual = nth({ value: 1, rest: { value: 2, rest: { value: 3, rest: null } } }, 5);
 expected = undefined;
-console.log('actual:');
-console.log(actual);
-console.log('expected:');
-console.log(expected);
+console.log('actual:  ', actual);
+console.log('expected:', expected);

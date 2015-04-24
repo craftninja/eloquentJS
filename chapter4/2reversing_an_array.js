@@ -20,23 +20,13 @@ function reverseArrayInPlace(array) {
 console.log("reverseArray")
 var array = [1,2,3,4,5];
 var actual = reverseArray(array);
-console.log("actual:");
-console.log(actual);
-console.log(array);
-
 var expected = [5,4,3,2,1];
-console.log("expected:");
-console.log(expected);
-console.log([1,2,3,4,5]);
+console.log('actual:  ', actual, 'original array:', array);
+console.log('expected:', expected, 'original array:', [1,2,3,4,5]);
 
 console.log("reverseArrayInPlace")
 var array = [1,2,3,4,5];
 var actual = reverseArrayInPlace(array);
-console.log("actual:");
-console.log(actual);
-console.log(array);
-
 var expected = [5,4,3,2,1];
-console.log("expected:");
-console.log(expected);
-console.log(expected);
+console.log('actual:  ', actual, 'original array:', array);
+console.log('expected:', expected, 'original array:', expected);
