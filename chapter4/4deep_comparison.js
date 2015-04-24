@@ -1,12 +1,8 @@
 function deepEquals(valueA, valueB) {
   if (typeof(valueA) === 'object' && valueA !== null) {
-    var result = true
     for (property in valueA) {
-      if (valueA[property] !== valueB[property]) {
-        return result = false;
-      };
+      return deepEquals(valueA[property], valueB[property])
     };
-    return result;
   } else {
     return valueA === valueB;
   };
