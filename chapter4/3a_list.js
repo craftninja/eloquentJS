@@ -17,15 +17,17 @@ var listToArray = function (list) {
 };
 
 var prepend = function (element, list) {
-  return list = {value: element, rest: list};
+  return {value: element, rest: list};
 };
 
 var nth = function (list, index) {
-  if (index === 0) {
-    return list ? list.value : undefined ;
+  if (!list) {
+    return undefined;
+  } else if (index === 0) {
+    return list.value;
   } else {
-    return list ? nth (list.rest, index-1) : undefined;
-  };
+    return nth (list.rest, index-1);
+  }
 };
 
 var actual = arrayToList([1,2,3]);
