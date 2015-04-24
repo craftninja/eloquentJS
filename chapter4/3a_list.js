@@ -19,6 +19,10 @@ var listToArray = function (list) {
   return array
 }
 
+var prepend = function (element, list) {
+  return list = {value: element, rest: list}
+}
+
 var actual = arrayToList([1,2,3])
 var expected = "{ value: 1, rest: { value: 2, rest: { value: 3, rest: null } } }"
 console.log('actual:')
@@ -28,6 +32,13 @@ console.log(expected)
 
 actual = listToArray({ value: 1, rest: { value: 2, rest: { value: 3, rest: null } } })
 expected = [1,2,3]
+console.log('actual:')
+console.log(actual)
+console.log('expected:')
+console.log(expected)
+
+actual = prepend(1, { value: 2, rest: { value: 3, rest: null } })
+expected = "{ value: 1, rest: { value: 2, rest: { value: 3, rest: null } } }"
 console.log('actual:')
 console.log(actual)
 console.log('expected:')
