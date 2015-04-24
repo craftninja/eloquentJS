@@ -21,16 +21,11 @@ var prepend = function (element, list) {
 };
 
 var nth = function (list, index) {
-  var element;
-  for (i = 0; i <= index; i ++) {
-    if (list) {
-      element = list.value;
-      list = list.rest;
-    } else {
-      return undefined;
-    };
+  if (index === 0) {
+    return list ? list.value : undefined ;
+  } else {
+    return list ? nth (list.rest, index-1) : undefined;
   };
-  return element;
 };
 
 var actual = arrayToList([1,2,3]);
