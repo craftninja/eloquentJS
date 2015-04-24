@@ -1,5 +1,5 @@
 function reverseArray(array) {
-  newArray = [];
+  var newArray = [];
   for (i = 0; i < array.length; i ++) {
     newArray.unshift(array[i]);
   };
@@ -9,7 +9,7 @@ function reverseArray(array) {
 function reverseArrayInPlace(array) {
   var tmp;
   for (i = 0; i < array.length/2; i ++ ) {
-    tmp = array.slice(i, i+1)[0];
+    tmp = array[i];
     array[i] = array[array.length - i - 1];
     array[array.length - i - 1] = tmp;
   };
