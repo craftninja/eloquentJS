@@ -1,12 +1,9 @@
 var arrayToList = function (arr) {
-  var node = null
+  var list = null
   for (var i = arr.length - 1; i >=0; i -= 1) {
-    node = {
-      value: arr[i],
-      rest: node
-    };
+    list = prepend(arr[i], list)
   };
-  return node;
+  return list;
 }
 
 var listToArray = function (list) {
