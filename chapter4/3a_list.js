@@ -23,8 +23,12 @@ var prepend = function (element, list) {
 var nth = function (list, index) {
   var element;
   for (i = 0; i <= index; i ++) {
-    element = list.value;
-    list = list.rest;
+    if (list) {
+      element = list.value;
+      list = list.rest;
+    } else {
+      return undefined;
+    };
   };
   return element;
 };
@@ -52,6 +56,13 @@ console.log(expected);
 
 actual = nth({ value: 1, rest: { value: 2, rest: { value: 3, rest: null } } }, 2);
 expected = 3;
+console.log('actual:');
+console.log(actual);
+console.log('expected:');
+console.log(expected);
+
+actual = nth({ value: 1, rest: { value: 2, rest: { value: 3, rest: null } } }, 5);
+expected = undefined;
 console.log('actual:');
 console.log(actual);
 console.log('expected:');
