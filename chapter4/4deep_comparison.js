@@ -14,34 +14,34 @@ var expected = true
 console.log('actual:  ', actual);
 console.log('expected:', expected);
 
-var actual = deepEquals(1, 2);
-var expected = false
+actual = deepEquals(1, 2);
+expected = false
 console.log('actual:  ', actual);
 console.log('expected:', expected);
 
 console.log('null:')
-var actual = deepEquals(null, null);
-var expected = true
+actual = deepEquals(null, null);
+expected = true
 console.log('actual:  ', actual);
 console.log('expected:', expected);
 
-var actual = deepEquals(null, {'key': 'value'});
-var expected = false
+actual = deepEquals(null, {'key': 'value'});
+expected = false
 console.log('actual:  ', actual);
 console.log('expected:', expected);
 
 console.log('objects:')
-var actual = deepEquals({'key': 'value', 'key2': 'value2'}, {'key': 'value', 'key2': 'value2'});
-var expected = true
+actual = deepEquals({'key': 'value', 'key2': 'value2'}, {'key': 'value', 'key2': 'value2'});
+expected = true
 console.log('actual:  ', actual);
 console.log('expected:', expected);
 
-var actual = deepEquals([1,2,3], [2,3,4]);
-var expected = false
+actual = deepEquals([1,2,3], [2,3,4]);
+expected = false
 console.log('actual:  ', actual);
 console.log('expected:', expected);
 
-var actual = deepEquals([1,2,3], [1,2,3]);
-var expected = true
+actual = deepEquals([1,2,3], [1,2,3]);
+expected = true
 console.log('actual:  ', actual);
 console.log('expected:', expected);
