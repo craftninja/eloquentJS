@@ -64,3 +64,7 @@ console.log(arr.concat(['a', 'b', 'c']))
 console.log("arr still returns:")
 console.log(arr)
 console.log("")
+console.log("FOREACH");
+console.log("arr.forEach(function(array_element){ do this thing }) accepts a function and runs each item in the array into the function passing the item in as an argument to that function.");
+console.log("arr.forEach(function(num) { console.log(num) }) logs each element in the array");
+arr.forEach(function(num) { console.log(num) })
