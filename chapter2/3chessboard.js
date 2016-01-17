@@ -18,3 +18,27 @@ do {
   if (i < max) console.log(row2);
   i ++
 } while (i < max);
+
++--------------------------
+
+var size = 7
+var line = "";
+for (var i = 1; i <= size; i++) {
+  if (i % 2 == 0) {
+    line = "";
+    hash = true;
+    while (line.length < size) {
+      hash ? line += "#" : line += " ";
+      hash = !hash;
+    };
+    console.log(line);
+  } else {
+    line = "";
+    hash = true;
+    while (line.length < size) {
+      hash ? line += " " : line += "#";
+      hash = !hash;
+    };
+    console.log(line);
+  };
+};
