@@ -18,3 +18,17 @@ console.log("Should be 2")
 
 console.log(countChar("kakkerlak", "k"));
 console.log("Should be 4")
+
++---------------------------
+
+function countBs(string) {
+  return countChar(string, 'B');
+};
+
+function countChar(string, char) {
+  var charCount = 0;
+  string.split('').forEach(function(letter) {
+    if (letter === char) {charCount ++};
+  });
+  return charCount;
+}

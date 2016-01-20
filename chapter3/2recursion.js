@@ -17,3 +17,16 @@ console.log(isEven(75));
 // → false
 console.log(isEven(-1));
 // → ??
+
++------------------
+
+function isEven(num) {
+  if (num < 0) { num = num * -1};
+  if (num === 1) {
+    return false;
+  } else if (num === 0) {
+    return true;
+  } else {
+    return isEven(num - 2);
+  };
+};
