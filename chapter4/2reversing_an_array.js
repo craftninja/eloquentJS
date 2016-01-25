@@ -26,7 +26,28 @@ console.log('expected:', expected, 'original array:', [1,2,3,4,5]);
 
 console.log("reverseArrayInPlace")
 var array = [1,2,3,4,5];
-var actual = reverseArrayInPlace(array);
+reverseArrayInPlace(array)
+var originalArray = [1,2,3,4,5];
+var actual = array;
 var expected = [5,4,3,2,1];
-console.log('actual:  ', actual, 'original array:', array);
-console.log('expected:', expected, 'original array:', expected);
+console.log('actual:  ', actual, 'original array:', originalArray);
+console.log('expected:', expected, 'original array:', originalArray);
+
+// +===========================
+
+function reverseArray(original) {
+  newArray = []
+  original.forEach(function(element) {
+    newArray.unshift(element)
+  })
+  return newArray
+}
+
+function reverseArrayInPlace(original) {
+  var leftOne;
+  for (var i = 0; i < original.length / 2; i ++) {
+    leftOne = original[i];
+    original[i] = original[original.length - i - 1];
+    original[original.length - i - 1] = leftOne;
+  };
+};
