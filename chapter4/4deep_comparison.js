@@ -1,3 +1,4 @@
+/*
 function deepEquals(valueA, valueB) {
   if (typeof(valueA) === 'object' && valueA !== null) {
     for (property in valueA) {
@@ -7,7 +8,7 @@ function deepEquals(valueA, valueB) {
     return valueA === valueB;
   };
 }
-
+*/
 console.log('numbers:')
 var actual = deepEquals(1, 1);
 var expected = true
@@ -45,3 +46,15 @@ actual = deepEquals([1,2,3], [1,2,3]);
 expected = true
 console.log('actual:  ', actual);
 console.log('expected:', expected);
+
+// +==================================
+
+function deepEquals(valA, valB) {
+  if (typeof valA === 'object' && valA !== null) {
+    for (var property in valA) {
+      return deepEquals(valA[property], valB[property]);
+    };
+  } else {
+    return valA === valB;
+  };
+};
