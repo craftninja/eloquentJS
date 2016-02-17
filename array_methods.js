@@ -68,3 +68,24 @@ console.log("FOREACH");
 console.log("arr.forEach(function(array_element){ do this thing }) accepts a function and runs each item in the array into the function passing the item in as an argument to that function.");
 console.log("arr.forEach(function(num) { console.log(num) }) logs each element in the array");
 arr.forEach(function(num) { console.log(num) })
+console.log("Map");
+console.log("array.map(callback)");
+var array = [1,2,3];
+var newArray = array.map(function(elem) {
+  return elem + 1
+});
+console.log(array);
+console.log(newArray);
+
+console.log("Reduce / Inject / Folding");
+console.log("array.reduce(callback, initialValue);");
+reduction = array.reduce(function(sum, element) {
+  return sum + element;
+})
+console.log(reduction);
+
+var words = ['Math ', 'is ', 'awesome!'];
+reduction = words.reduce(function(sentance, word) {
+  return sentance + word;
+});
+console.log(reduction)
