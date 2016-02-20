@@ -9,11 +9,11 @@ function every(list, matcher) {
 };
 
 function some(list, matcher) {
-  var match = false
+  var match = false;
   list.forEach(function(element) {
     if (matcher(element)) {
       return match = true;
-    }
+    };
   });
   return match;
 };
