@@ -1,7 +1,9 @@
 function every(list, matcher) {
   var matchy = true;
   list.forEach(function(element){
-    if (!matcher(element)) matchy = false;
+    if (!matcher(element)) {
+      return matchy = false;
+    };
   });
   return matchy;
 };
