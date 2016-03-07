@@ -20,7 +20,7 @@ function Vector (x, y) {
     var newY = this.y - vector.y;
     return new Vector(newX, newY);
   };
-}
+};
 
 function sqrd (num) {
   return num * num;
