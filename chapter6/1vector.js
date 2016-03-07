@@ -22,8 +22,12 @@ function Vector (x, y) {
   };
 }
 
+function sqrd (num) {
+  return num * num;
+};
+
 Object.defineProperty(Vector.prototype, "length", {
-  get: function() { return Math.sqrt(this.x * this.x + this.y * this.y); }
+  get: function() { return Math.sqrt( sqrd(this.x) + sqrd(this.y) ); }
 });
 
 console.log('actual:  ', new Vector(1, 2).plus(new Vector(2, 3)));
