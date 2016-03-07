@@ -11,13 +11,13 @@ function Vector (x, y) {
   this.y = y;
 
   this.plus = function(vector) {
-    newX = this.x + vector.x;
-    newY = this.y + vector.y;
+    var newX = this.x + vector.x;
+    var newY = this.y + vector.y;
     return new Vector(newX, newY);
   };
   this.minus = function(vector) {
-    newX = this.x - vector.x;
-    newY = this.y - vector.y;
+    var newX = this.x - vector.x;
+    var newY = this.y - vector.y;
     return new Vector(newX, newY);
   };
 }
